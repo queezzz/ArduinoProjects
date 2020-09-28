@@ -1,5 +1,9 @@
 #include <LiquidCrystal.h>
+
+//declaring pins on the arduino
 LiquidCrystal lcd(2,3,4,5,6,7);
+
+//Smiley emoji
 byte smiley[8] = {
   B00000,
   B10001,
@@ -10,6 +14,7 @@ byte smiley[8] = {
   B00000
 };
 
+//Heart emoji 
 byte heart[8] = { 
   0b00000,
   0b01010,
@@ -21,6 +26,7 @@ byte heart[8] = {
   0b00000
   };
 
+//Sun emoji
 byte sun[8] = { 
   0b00100,
   0b10001,
@@ -32,6 +38,7 @@ byte sun[8] = {
   0b00000
   };
 
+//dot emoji
 byte dot[8] = { 
   0b00100,
   0b10001,
@@ -43,6 +50,7 @@ byte dot[8] = {
   0b00000
   };
 
+//random text to print on the LCD 
 void setup() {
   lcd.createChar(0, smiley);
   lcd.createChar(1, heart);
@@ -57,9 +65,10 @@ void setup() {
   
 }
 
+//making the text flash
 void loop() {
-  //lcd.noDisplay();
-  //delay(250);
+  lcd.noDisplay();
+  delay(250);
   lcd.display();
-  //delay(250);
+  delay(250);
  }
